@@ -26,3 +26,10 @@ _News.
 
 _Contact
 
+## Front
+
+_ Jaune Cappa : #FFC05E
+
+_Couleur secandaire : #00001a
+
+_Break points : 576 px, 992px, 1200px.
