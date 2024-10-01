@@ -30,6 +30,6 @@ _Contact
 
 _ Jaune Cappa : #FFC05E
 
-_Couleur secandaire : #00001a
+_Couleur secandaire : #00215E
 
 _Break points : 576 px, 992px, 1200px.
