@@ -1,0 +1,147 @@
+/* Appel des fonts */
+/* Appel des fonts */
+/* Appel des fonts */
+
+@font-face {
+    font-family: 'Titre';
+    src: url('../fonts/OleoScript-Regular.woff');
+}
+
+@font-face {
+    font-family: 'Texte';
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+/* Général */
+/* Général */
+/* Général */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Texte', sans-serif;
+    --cappaCouleurPrincipale: #F3C623;
+    --cappaCouleurIntermediaire: #EB8317;
+    --cappaCouleurSecondaire: #10375C;
+    --cappaBackground: #F4F6FF;
+    --cappaTexte: #000000;
+}
+
+img,
+input {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+body {
+    background-color: var(--cappaBackground);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--cappaCouleurSecondaire);
+    font-family: 'Titre', serif;
+}
+
+li:hover,
+p:hover,
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+    cursor: default;
+}
+
+p {
+    color: var(--cappaTexte);
+    font-family: 'Texte', sans-serif;
+}
+
+/* Classes fréquentes */
+/* Classes fréquentes */
+/* Classes fréquentes */
+
+.justifie {
+    text-align: justify;
+    justify-content: baseline;
+}
+
+.indent {
+    text-indent: 1rem;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.spaceBottom {
+    margin-bottom: 1rem;
+}
+
+.spaceTop {
+    margin-top: 1rem;
+}
+
+.lstn {
+    list-style-type: none;
+}
+
+.tdn {
+    text-decoration: none;
+}
+
+.couleurPrincipale {
+    background-color: var(--cappaCouleurPrincipale);
+}
+
+.couleurSecondaire {
+    background-color: var(--cappaCouleurSecondaire);
+}
+
+.miniTitre {
+    font-weight: 700;
+    color: var(--cappaCouleurSecondaire);
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+/* Header */
+/* Header */
+/* Header */
+
+/* Main */
+/* Main */
+/* Main */
+
+/* Footer */
+/* Footer */
+/* Footer */
+
+/* Media Querries */
+/* Media Querries */
+/* Media Querries */
+
+/* Tablettes */
+
+@media screen and (min-width:576px) {}
+
+/* PC petits écrans */
+
+@media screen and (min-width:768px) {}
+
+/* Ecrans larges */
+
+@media screen and (min-width:1400px) {}
