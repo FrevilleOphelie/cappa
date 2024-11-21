@@ -75,6 +75,14 @@ p {
     font-family: 'Texte', sans-serif;
 }
 
+svg {
+    height: 1.75rem;
+}
+
+a {
+    text-decoration: none;
+}
+
 /* Classes fréquentes */
 /* Classes fréquentes */
 /* Classes fréquentes */
@@ -137,6 +145,27 @@ p {
 /* Header */
 /* Header */
 
+header nav {
+    background-color: var(--cappaCouleurPrincipale);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#titreH1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#menuDesktopContenu {
+    display: none;
+}
+
+#heroDesktop {
+    display: none;
+}
+
 /* Main */
 /* Main */
 /* Main */
@@ -155,7 +184,12 @@ p {
 
 /* PC petits écrans */
 
-@media screen and (min-width:768px) {}
+@media screen and (min-width:768px) {
+
+    #headMenuMobile {
+        display: none;
+    }
+}
 
 /* Ecrans larges */
 
