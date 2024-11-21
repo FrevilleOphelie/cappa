@@ -26,6 +26,7 @@
     --cappaCouleurSecondaire: #10375C;
     --cappaBackground: #F4F6FF;
     --cappaTexte: #000000;
+    --cappaIcones: #00215E;
 }
 
 img,
@@ -107,12 +108,16 @@ p {
     text-decoration: none;
 }
 
-.couleurPrincipale {
+.fondCouleurPrincipale {
     background-color: var(--cappaCouleurPrincipale);
 }
 
-.couleurSecondaire {
-    background-color: var(--cappaCouleurSecondaire);
+.fondCouleurIntermediaire {
+    background-color: var(--cappaCouleurIntermediaire);
+}
+
+.fondCouleurBackground {
+    background-color: var(--cappaBackground);
 }
 
 .miniTitre {
