@@ -1,4 +1,4 @@
-<section id="header" class="fondCouleurBackground">
+<section id="header">
 
 	<nav {# Partie du code concernant le menu version mobile #} id="headMenuMobile" class"menu lstn fondcouleurprincipale">
 
@@ -42,14 +42,14 @@
 			</li>
 
 			<li>
-				<a href="{{path('app_logout')}}" class='fondCouleurPrincipale tdn'>Déconnexion</a>
+				<a href="{{path('app_logout')}}" class='tdn'>Déconnexion</a>
 			</li>
 
 		</ul>
 
 	{% endif %}
 
-	<ul id="dropMenuMobileContenu" class="hide lstn fondCouleurPrincipale">
+	<ul id="dropMenuMobileContenu" class="hide lstn">
 
 		{% if is_granted('IS_AUTHENTICATED_FULLY') %}
 
@@ -60,31 +60,31 @@
 		{% endif %}
 
 		<li>
-			<a href="{{path('app_dons')}}" class='dropLink fondCouleurPrincipale tdn bold'>Nous Aider</a>
+			<a href="{{path('app_dons')}}" class='dropLink tdn bold'>Nous Aider</a>
 		</li>
 
 		<li>
-			<a href="{{path('app_news')}}" class='dropLink fondCouleurPrincipale tdn'>À la une</a>
+			<a href="{{path('app_news')}}" class='dropLink tdn'>À la une</a>
 		</li>
 
 		<li>
-			<a href="{{path('app_informations')}}" class='dropLink fondCouleurPrincipale tdn'>À Savoir</a>
+			<a href="{{path('app_informations')}}" class='dropLink tdn'>À Savoir</a>
 		</li>
 
 		<li>
 
-			<span id="dropSousMenuChatsBtn" class="hide lstn fondCouleurPrincipale">
-				<a href="{{path('app_chats')}}" class='dropLink fondCouleurPrincipale tdn'>Nos Chats >></a>
+			<span id="dropSousMenuChatsBtn" class="hide lstn">
+				<a href="{{path('app_chats')}}" class='dropLink tdn'>Nos Chats >></a>
 			</span>
 
 		</li>
 
 		<li>
-			<a href="{{path('app_reseaux')}}" class='dropLink fondCouleurPrincipale tdn'>Suivez-nous >></a>
+			<a href="{{path('app_reseaux')}}" class='dropLink tdn'>Suivez-nous >></a>
 		</li>
 
 		<li>
-			<a href="{{path('app_contact')}}" class='dropLink fondCouleurPrincipale tdn'>Nous Contacter</a>
+			<a href="{{path('app_contact')}}" class='dropLink tdn'>Nous Contacter</a>
 		</li>
 
 	</ul>
@@ -102,35 +102,35 @@
 			</li>
 
 			<li>
-				<a href="{{path('app_logout')}}" class='fondCouleurPrincipale tdn'>Déconnexion</a>
+				<a href="{{path('app_logout')}}" class='tdn'>Déconnexion</a>
 			</li>
 
 		{% endif %}
 
 		<li>
-			<a href="{{path('app_dons')}}" class='dropLink fondCouleurPrincipale tdn bold'>Nous Aider</a>
+			<a href="{{path('app_dons')}}" class='dropLink tdn bold'>Nous Aider</a>
 		</li>
 
 		<li>
-			<a href="{{path('app_news')}}" class='dropLink fondCouleurPrincipale tdn'>À la une</a>
+			<a href="{{path('app_news')}}" class='dropLink tdn'>À la une</a>
 		</li>
 
 		<li>
-			<a {#href="{{path('app_info_pratique')}}"#} class='dropLink fondCouleurPrincipale tdn'>À Savoir</a>
+			<a {#href="{{path('app_info_pratique')}}"#} class='dropLink tdn'>À Savoir</a>
 		</li>
 
 		<li>
 			<span id="dropSousMenuChatsBtn" class="lstn fondCouleurPrincipale">
-				<a href="{{path('app_chats')}}" class='dropLink hOverMenu fondCouleurPrincipale tdn'>Nos Chats >></a>
+				<a href="{{path('app_chats')}}" class='dropLink hOverMenu tdn'>Nos Chats >></a>
 			</span>
 		</li>
 
 		<li>
-			<a href="{{path('app_reseaux')}}" class='dropLink hOverMenu fondCouleurPrincipale tdn'>Suivez-nous >></a>
+			<a href="{{path('app_reseaux')}}" class='dropLink hOverMenu tdn'>Suivez-nous >></a>
 		</li>
 
 		<li>
-			<a href="{{path('app_contact')}}" class='dropLink fondCouleurPrincipale tdn'>Nous Contacter</a>
+			<a href="{{path('app_contact')}}" class='dropLink tdn'>Nous Contacter</a>
 		</li>
 
 	</ul>
@@ -149,10 +149,9 @@
 
 		<img
 		src="{{ asset('assets/images/photos/heroDesktop.jpg')}}" alt="Image d'accueil version ordinateur">
-	<!-- Penser à ajouter l'image pour le hero dektop !!!-->
 
 	</div>
 
 </section>
 
-<section {# Pour séparer graphiquement le header du main #} id="separationGraphique" class="barre fondCouleurPrincipale"></section>
+<section {# Pour séparer graphiquement le header du main #} id="separationGraphique" class="barre"></section>

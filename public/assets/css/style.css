@@ -42,11 +42,12 @@ body {
 header,
 main,
 footer {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
-    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+main {
+    background-color: var(--cappaBackground);
 }
 
 h1,
@@ -81,11 +82,17 @@ svg {
 
 a {
     text-decoration: none;
+    color: var(--cappaTexte);
 }
 
 /* Classes fréquentes */
 /* Classes fréquentes */
 /* Classes fréquentes */
+
+.conteneur {
+    width: 90%;
+    margin: auto;
+}
 
 .justifie {
     text-align: justify;
@@ -98,6 +105,13 @@ a {
 
 .bold {
     font-weight: 700;
+}
+.paddingTop{
+    padding-top: 1rem;
+}
+
+.paddingBottom{
+    padding-bottom: 1rem;
 }
 
 .spaceBottom {
@@ -152,6 +166,10 @@ header nav {
     align-items: center;
 }
 
+#separationGraphique{
+    border-bottom: 1px solid var(--cappaCouleurPrincipale);
+}
+
 #titreH1 {
     display: flex;
     justify-content: space-evenly;
@@ -173,6 +191,29 @@ header nav {
 /* Footer */
 /* Footer */
 /* Footer */
+
+#footer {
+    position: static;
+    bottom: 0;
+    width: 100%;
+}
+
+#footMenu {
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footLink {
+    padding: .25rem .5rem;
+    border-radius: 5px;
+}
+
+.footLink:hover {
+    color: var(--cappaIcones);
+}
 
 /* Media Querries */
 /* Media Querries */
