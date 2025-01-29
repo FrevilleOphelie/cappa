@@ -89,6 +89,13 @@ a {
 /* Classes fréquentes */
 /* Classes fréquentes */
 
+.menu {
+    position: relative;
+    padding: .5rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .conteneur {
     width: 90%;
     margin: auto;
@@ -159,11 +166,25 @@ a {
 /* Header */
 /* Header */
 
-header nav {
+h1 {
+    font-size: 2rem;
+    padding: 0 1rem;
+}
+
+#headMenuMobile {
     background-color: var(--cappaCouleurPrincipale);
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+#homeLink {
+    width: 100%;
+    margin: auto;
+}
+
+.paw {
+    padding: 0 .5rem;
 }
 
 #separationGraphique{
@@ -172,8 +193,12 @@ header nav {
 
 #titreH1 {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+}
+
+#menuDropBtn {
+    padding: .5rem;
 }
 
 #menuDesktopContenu {
