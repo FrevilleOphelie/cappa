@@ -15,14 +15,16 @@ class NewsCrudController extends AbstractCrudController
         return News::class;
     }
 
-    /*
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id'),
+            //Cacher le champ Id
+            IdField::new('id')
+                ->hideOnForm(),
+            //Champs Obligatoires
+            //Champs Facultatifs
             TextField::new('title'),
             TextEditorField::new('description'),
         ];
     }
-    */
 }

@@ -18,14 +18,28 @@ class ChatsCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
+            //Cacher le champ Id
             IdField::new('id')
                 ->hideOnForm(),
-            TextField::new('nom'),
-            TextField::new('dateNaissance'),
-            TextField::new('description'),
-            BooleanField::new('adopte')->setLabel('Adopté')->renderAsSwitch(),
-            BooleanField::new('parraine')->setLabel('Parrainné')->renderAsSwitch(),
-            TextField::new('marraine'),
+            //Champs obligatoires
+            TextField::new('nom')
+                ->setRequired(true)
+                ->setLabel('Nom'),
+            TextField::new('dateNaissance')
+            ->setRequired(true)
+            ->setLabel('Né(e) le'),
+            TextField::new('description')
+                ->setRequired(true)
+                ->setLabel('Nom'),
+            BooleanField::new('adopte')
+                ->setLabel('Adopté')
+                ->renderAsSwitch(),
+            BooleanField::new('parraine')
+                ->setLabel('Parrainné')
+                ->renderAsSwitch(),
+            //Champs facultatifs
+            TextField::new('marraine')
+                ->setLabel('Prénom marraine'),
         ];
     }
 }
