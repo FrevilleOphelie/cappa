@@ -17,8 +17,8 @@ class News
     #[ORM\Column(length: 255)]
     private ?string $type = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
-    private ?\DateTimeInterface $date = null;
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $date_heure = null;
 
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
@@ -46,14 +46,14 @@ class News
         return $this;
     }
 
-    public function getDate(): ?\DateTimeInterface
+    public function getDateHeure(): ?string
     {
-        return $this->date;
+        return $this->date_heure;
     }
 
-    public function setDate(?\DateTimeInterface $date): static
+    public function setDateHeure(?string $date_heure): static
     {
-        $this->date = $date;
+        $this->date_heure = $date_heure;
 
         return $this;
     }

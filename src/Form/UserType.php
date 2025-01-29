@@ -32,7 +32,7 @@ class UserType extends AbstractType
                 'options' => ['attr' => ['class' => 'password-field']],
                 'required' => true,
                 'first_options'  => ['label' => 'Mot de passe'],
-                'second_options' => ['label' => 'Confirmer le mot de passe'],
+                'second_options' => ['label' => 'Confirmer le nouveau mot de passe'],
             ]);
 
         // Ajoutez le champ "roles" seulement si l'utilisateur est un super administrateur

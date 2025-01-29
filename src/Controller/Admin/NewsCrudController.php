@@ -22,9 +22,15 @@ class NewsCrudController extends AbstractCrudController
             IdField::new('id')
                 ->hideOnForm(),
             //Champs Obligatoires
+            TextField::new('type')
+                ->setRequired(true)
+                ->setLabel('Intitulé'),
+            TextField::new('description')
+                ->setRequired(true)
+                ->setLabel('Description'),
             //Champs Facultatifs
-            TextField::new('title'),
-            TextEditorField::new('description'),
+            TextField::new('date_heure')
+                ->setLabel('Date et heure'),
         ];
     }
 }
