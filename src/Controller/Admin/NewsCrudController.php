@@ -31,6 +31,10 @@ class NewsCrudController extends AbstractCrudController
             //Champs Facultatifs
             TextField::new('date_heure')
                 ->setLabel('Date et heure'),
+            TextField::new('image')
+                ->setLabel('Image'),
+            TextField::new('lieu')
+                ->setLabel('Lieu'),
         ];
     }
 }
