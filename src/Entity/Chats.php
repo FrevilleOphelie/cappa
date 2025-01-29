@@ -15,19 +15,19 @@ class Chats
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $Nom = null;
+    private ?string $nom = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $DateNaissance = null;
+    private ?\DateTimeInterface $dateNaissance = null;
 
     #[ORM\Column(type: Types::TEXT)]
-    private ?string $Description = null;
+    private ?string $description = null;
 
     #[ORM\Column]
-    private ?bool $Adopte = null;
+    private ?bool $adopte = null;
 
     #[ORM\Column]
-    private ?bool $Parrainne = null;
+    private ?bool $parrainne = null;
 
     public function getId(): ?int
     {
@@ -36,60 +36,60 @@ class Chats
 
     public function getNom(): ?string
     {
-        return $this->Nom;
+        return $this->nom;
     }
 
-    public function setNom(string $Nom): static
+    public function setNom(string $nom): static
     {
-        $this->Nom = $Nom;
+        $this->nom = $nom;
 
         return $this;
     }
 
     public function getDateNaissance(): ?\DateTimeInterface
     {
-        return $this->DateNaissance;
+        return $this->dateNaissance;
     }
 
-    public function setDateNaissance(\DateTimeInterface $DateNaissance): static
+    public function setDateNaissance(\DateTimeInterface $dateNaissance): static
     {
-        $this->DateNaissance = $DateNaissance;
+        $this->dateNaissance = $dateNaissance;
 
         return $this;
     }
 
     public function getDescription(): ?string
     {
-        return $this->Description;
+        return $this->description;
     }
 
-    public function setDescription(string $Description): static
+    public function setDescription(string $description): static
     {
-        $this->Description = $Description;
+        $this->description = $description;
 
         return $this;
     }
 
     public function isAdopte(): ?bool
     {
-        return $this->Adopte;
+        return $this->adopte;
     }
 
-    public function setAdopte(bool $Adopte): static
+    public function setAdopte(bool $adopte): static
     {
-        $this->Adopte = $Adopte;
+        $this->adopte = $adopte;
 
         return $this;
     }
 
     public function isParrainne(): ?bool
     {
-        return $this->Parrainne;
+        return $this->parrainne;
     }
 
-    public function setParrainne(bool $Parrainne): static
+    public function setParrainne(bool $parrainne): static
     {
-        $this->Parrainne = $Parrainne;
+        $this->parrainne = $parrainne;
 
         return $this;
     }

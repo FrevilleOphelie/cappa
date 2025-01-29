@@ -15,19 +15,19 @@ class News
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $Type = null;
+    private ?string $type = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
-    private ?\DateTimeInterface $Date = null;
+    private ?\DateTimeInterface $date = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
-    private ?string $Description = null;
+    private ?string $description = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $Image = null;
+    private ?string $image = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $Lieu = null;
+    private ?string $lieu = null;
 
     public function getId(): ?int
     {
@@ -36,60 +36,60 @@ class News
 
     public function getType(): ?string
     {
-        return $this->Type;
+        return $this->type;
     }
 
-    public function setType(string $Type): static
+    public function setType(string $type): static
     {
-        $this->Type = $Type;
+        $this->type = $type;
 
         return $this;
     }
 
     public function getDate(): ?\DateTimeInterface
     {
-        return $this->Date;
+        return $this->date;
     }
 
-    public function setDate(?\DateTimeInterface $Date): static
+    public function setDate(?\DateTimeInterface $date): static
     {
-        $this->Date = $Date;
+        $this->date = $date;
 
         return $this;
     }
 
     public function getDescription(): ?string
     {
-        return $this->Description;
+        return $this->description;
     }
 
-    public function setDescription(?string $Description): static
+    public function setDescription(?string $description): static
     {
-        $this->Description = $Description;
+        $this->description = $description;
 
         return $this;
     }
 
     public function getImage(): ?string
     {
-        return $this->Image;
+        return $this->image;
     }
 
-    public function setImage(?string $Image): static
+    public function setImage(?string $image): static
     {
-        $this->Image = $Image;
+        $this->image = $image;
 
         return $this;
     }
 
     public function getLieu(): ?string
     {
-        return $this->Lieu;
+        return $this->lieu;
     }
 
-    public function setLieu(?string $Lieu): static
+    public function setLieu(?string $lieu): static
     {
-        $this->Lieu = $Lieu;
+        $this->lieu = $lieu;
 
         return $this;
     }
