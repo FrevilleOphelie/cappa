@@ -29,6 +29,9 @@ class Chats
     #[ORM\Column]
     private ?bool $parrainne = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $marraine = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -90,6 +93,18 @@ class Chats
     public function setParrainne(bool $parrainne): static
     {
         $this->parrainne = $parrainne;
+
+        return $this;
+    }
+
+    public function getMarraine(): ?string
+    {
+        return $this->marraine;
+    }
+
+    public function setMarraine(?string $marraine): static
+    {
+        $this->marraine = $marraine;
 
         return $this;
     }
