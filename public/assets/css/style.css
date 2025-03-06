@@ -149,17 +149,20 @@ a {
     background-color: var(--cappaBackground);
 }
 
-.miniTitre {
-    font-weight: 700;
-    color: var(--cappaCouleurSecondaire);
-}
-
 .show {
     display: block;
 }
 
 .hide {
     display: none;
+}
+
+.tac {
+    text-align: center;
+}
+
+.logoCommercial{
+    width: 49%;
 }
 
 /* Header */
@@ -213,7 +216,7 @@ h1 {
 }
 
 #separationGraphique{
-    border-bottom: 1px solid var(--cappaCouleurPrincipale);
+    border-bottom: 1rem solid var(--cappaCouleurPrincipale);
 }
 
 #titreH1 {
@@ -232,6 +235,17 @@ h1 {
 
 #heroDesktop {
     display: none;
+}
+
+#partenairesCommerciaux {
+    display: flex;
+
+}
+
+#partenairesCommerciaux {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 /* Main */

@@ -138,36 +138,6 @@
 
 <section id="hero">
 
-	<div id="sponso">
-
-		<div id="imgSponso">
-
-			<span id="zooplus">
-			
-			<a href="">
-			
-			{# Demander autorisation à Zooplus pour le logo et adresse pour savoir que la connexion viens d'une redirection depuis le Cappa !!!!! #}
-			
-				<img src="{{ asset('assets/images/logos/zooplus.jpg')}}" alt="Logo Zooplus">
-			
-			</a>
-
-			</span>
-
-			<span id="teaming">
-			
-			<a href="https://www.teaming.net/cappa">
-			
-				<img src="{{ asset('assets/images/logos/teaming.jpg')}}" alt="Logo Teaming">
-
-			</a>
-
-			</span>
-
-		</div>
-
-	</div>
-
 	<div id="heroMobile">
 
 		<img src="{{ asset('assets/images/photos/heroMobile.jpg')}}" alt="Image d'accueil version mobile">
@@ -180,11 +150,64 @@
 
 	</div>
 
+	<div id="sponso">
+
+		<div id="partenaires">
+
+			<div id="imgSponso">
+
+				<div id="defenseDeLAnimal" class='tac spaceTop spaceBottom'>
+
+					<p>Le CAPPA est une association membre de la Confédération Nationale Défense de l'animal</p>
+
+					<a href="https://www.defensedelanimal.fr/">
+
+						<img src="{{ asset('assets/images/logos/defenseDeLAnimal.png')}}" alt="Site de La Défense de l'Animal">
+
+					</a>
+
+				</div>
+
+				<h2 class='spaceTop spaceBottom'>Nos partenaires</h2>
+
+				<div id="partenairesCommerciaux">					
+
+					<div id="zooplus" class='logoCommercial'>
+
+						<a
+							href="">
+
+							{# Demander autorisation à Zooplus pour le logo et adresse pour savoir que la connexion viens d'une redirection depuis le Cappa !!!!! #}
+
+							<img src="{{ asset('assets/images/logos/zooplus.jpg')}}" alt="Logo Zooplus">
+
+						</a>
+
+					</div>
+
+					<div id="teaming" class='logoCommercial'>
+
+						<a href="https://www.teaming.net/cappa">
+
+							<img src="{{ asset('assets/images/logos/teaming.jpg')}}" alt="Logo Teaming">
+
+						</a>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
 	<div id="liensDons">
 
 		<span id="faitesUnDon">
-		
-			<p class="megaImportant">Soutenez-nous : faites un don </p>
+
+			<h2 class='spaceTop spaceBottom'>Soutenez-nous : faites un don</h2>
 
 		</span>
 
@@ -202,4 +225,4 @@
 
 </section>
 
-<section {# Pour séparer graphiquement le header du main #} id="separationGraphique" class="barre"></section>
+<section {# Pour séparer graphiquement le header du main #} id="separationGraphique"></section>
