@@ -80,6 +80,10 @@ svg {
     height: 1.75rem;
 }
 
+.bigSvg {
+    height: 5rem;
+}
+
 a {
     text-decoration: none;
     color: var(--cappaTexte);
@@ -113,11 +117,12 @@ a {
 .bold {
     font-weight: 700;
 }
-.paddingTop{
+
+.paddingTop {
     padding-top: 1rem;
 }
 
-.paddingBottom{
+.paddingBottom {
     padding-bottom: 1rem;
 }
 
@@ -161,7 +166,7 @@ a {
     text-align: center;
 }
 
-.logoCommercial{
+.logoCommercial {
     width: 49%;
 }
 
@@ -180,7 +185,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    }
+}
 
 #homeLink {
     width: 100%;
@@ -191,7 +196,7 @@ h1 {
     padding: 0 .5rem;
 }
 
-#menuDropBtn:hover{
+#menuDropBtn:hover {
     cursor: pointer;
 }
 
@@ -215,7 +220,7 @@ h1 {
     color: var(--cappaIcones);
 }
 
-#separationGraphique{
+#separationGraphique {
     border-bottom: 1rem solid var(--cappaCouleurPrincipale);
 }
 
@@ -229,7 +234,7 @@ h1 {
     padding: .5rem;
 }
 
-#menuDesktopContenu {
+#headMenuDesktop {
     display: none;
 }
 
@@ -286,13 +291,42 @@ h1 {
 
 /* Tablettes */
 
-@media screen and (min-width:576px) {}
+@media screen and (min-width:576px) {
+
+    #heroMobile {
+        display: none;
+    }
+
+    #heroDesktop {
+        display: block;
+    }
+}
 
 /* PC petits écrans */
 
 @media screen and (min-width:768px) {
 
+    h1 {
+        font-size: 5rem;
+    }
+
     #headMenuMobile {
+        display: none;
+    }
+
+    #headMenuDesktop {
+        position: relative;
+        background-color: var(--cappaCouleurPrincipale);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #sponsoDesktop {
+        display: block;
+    }
+
+    #sponsoMobile {
         display: none;
     }
 }
