@@ -306,6 +306,17 @@ h1 {
 
     /* HEADER*/
 
+    #headMenuMobile {
+        height: 6rem;
+        padding: 0 1rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+        padding: 0 3rem;
+    }
+    
+
     #heroMobile {
         display: none;
     }
