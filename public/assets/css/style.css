@@ -298,12 +298,24 @@ h1 {
 
 @media screen and (min-width:576px) {
 
+/* HEADER*/
+
     #heroMobile {
         display: none;
     }
 
     #heroDesktop {
         display: block;
+    }
+
+/* MAIN */
+
+
+/* FOOTER */
+
+    #footMenu {
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 }
 
