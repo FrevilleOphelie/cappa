@@ -81,7 +81,7 @@ svg {
 }
 
 .bigSvg {
-    height: 5rem;
+    height: 3rem;
 }
 
 a {
@@ -356,12 +356,16 @@ h1 {
     }
 }
 
-/* PC écran petits à moyens */
+/* PC écran petits */
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:1080px) {
+
+    #homeLink {
+        width: 25%;
+    }
 
     h1 {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 
     #headMenuMobile {
@@ -369,23 +373,27 @@ h1 {
     }
 
     #headMenuDesktop {
-        margin: auto;
-        position: relative;
         background-color: var(--cappaCouleurPrincipale);
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    #headMenuDesktop{
+    #menuDesktopContenu{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
 
+    #sousMenuChatsBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
 
-/* Ecrans larges */
+/* PC écran classique */
 
 @media screen and (min-width:1400px) {}
