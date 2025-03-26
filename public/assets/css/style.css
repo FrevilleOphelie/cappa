@@ -221,6 +221,12 @@ h1 {
     color: var(--cappaIcones);
 }
 
+#defenseDeLAnimal>p{
+    color: #323335;
+    font-family: 'Titre', serif;
+    font-size: 1.5rem;
+}
+
 #sponsoDesktop {
     display: none;
 }
@@ -298,7 +304,7 @@ h1 {
 
 @media screen and (min-width:576px) {
 
-/* HEADER*/
+    /* HEADER*/
 
     #heroMobile {
         display: none;
@@ -308,10 +314,20 @@ h1 {
         display: block;
     }
 
-/* MAIN */
+    #defenseDeLAnimal {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #separationGraphique {
+        border-bottom: 1.5rem solid var(--cappaCouleurPrincipale);
+    }
+
+    /* MAIN */
 
 
-/* FOOTER */
+    /* FOOTER */
 
     #footMenu {
         flex-direction: row;
@@ -339,13 +355,6 @@ h1 {
         align-items: center;
     }
 
-    #sponsoDesktop {
-        display: block;
-    }
-
-    #sponsoMobile {
-        display: none;
-    }
 }
 
 /* Ecrans larges */
