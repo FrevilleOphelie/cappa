@@ -369,9 +369,17 @@ h1 {
     }
 
     #headMenuDesktop {
+        margin: auto;
         position: relative;
         background-color: var(--cappaCouleurPrincipale);
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #headMenuDesktop{
+        display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
@@ -380,4 +388,4 @@ h1 {
 
 /* Ecrans larges */
 
-@media screen and (min-width:1800px) {}
+@media screen and (min-width:1400px) {}
