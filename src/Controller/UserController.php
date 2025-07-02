@@ -130,5 +130,7 @@ class UserController extends AbstractController
 
             return $this->redirectToRoute('app_user_index');
         }
+
+        throw new AccessDeniedException('Vous n\'avez pas accès à cette page.');
     }
 }
