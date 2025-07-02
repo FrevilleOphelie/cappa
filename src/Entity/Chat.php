@@ -32,6 +32,9 @@ class Chat
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $marraine = null;
 
+    #[ORM\Column(type: 'string')]
+    private ?string $chatFilename;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -105,6 +108,18 @@ class Chat
     public function setMarraine(?string $marraine): static
     {
         $this->marraine = $marraine;
+
+        return $this;
+    }
+
+    public function getChatFilename(): string
+    {
+        return $this->chatFilename;
+    }
+
+    public function setChatFilename(string $chatFilename): self
+    {
+        $this->chatFilename = $chatFilename;
 
         return $this;
     }
