@@ -2,7 +2,7 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Chats;
+use App\Entity\Chat;
 use App\Entity\News;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -33,7 +33,7 @@ class DashboardController extends AbstractDashboardController
                 MenuItem::linkToRoute('Retour au site', 'fa-solid fa-home', 'app_home'),
 
                 MenuItem::section('Chats'),
-                MenuItem::linkToCrud('Gestion des Pensionnaires', 'fa-solide fa-paw', Chats::class),
+                MenuItem::linkToCrud('Gestion des Pensionnaires', 'fa-solide fa-paw', Chat::class),
 
                 MenuItem::section('News'),
                 MenuItem::linkToCrud('Gestion des Nouvelles', 'fa-regular fa-newspaper', News::class),
