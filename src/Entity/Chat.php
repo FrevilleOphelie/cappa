@@ -2,12 +2,12 @@
 
 namespace App\Entity;
 
-use App\Repository\ChatsRepository;
+use App\Repository\ChatRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: ChatsRepository::class)]
-class Chats
+#[ORM\Entity(repositoryClass: ChatRepository::class)]
+class Chat
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -17,8 +17,8 @@ class Chats
     #[ORM\Column(length: 255)]
     private ?string $nom = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $dateNaissance = null;
+    #[ORM\Column(length: 255)]
+    private ?string $dateNaissance = null;
 
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
@@ -49,12 +49,12 @@ class Chats
         return $this;
     }
 
-    public function getDateNaissance(): ?\DateTimeInterface
+    public function getDateNaissance(): ?string
     {
         return $this->dateNaissance;
     }
 
-    public function setDateNaissance(\DateTimeInterface $dateNaissance): static
+    public function setDateNaissance(string $dateNaissance): static
     {
         $this->dateNaissance = $dateNaissance;
 

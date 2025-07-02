@@ -2,22 +2,22 @@
 
 namespace App\Repository;
 
-use App\Entity\Chats;
+use App\Entity\Chat;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Chats>
+ * @extends ServiceEntityRepository<Chat>
  */
-class ChatsRepository extends ServiceEntityRepository
+class ChatRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Chats::class);
+        parent::__construct($registry, Chat::class);
     }
 
     //    /**
-    //     * @return Chats[] Returns an array of Chats objects
+    //     * @return Chat[] Returns an array of Chat objects
     //     */
     //    public function findByExampleField($value): array
     //    {
@@ -31,7 +31,7 @@ class ChatsRepository extends ServiceEntityRepository
     //        ;
     //    }
 
-    //    public function findOneBySomeField($value): ?Chats
+    //    public function findOneBySomeField($value): ?Chat
     //    {
     //        return $this->createQueryBuilder('c')
     //            ->andWhere('c.exampleField = :val')

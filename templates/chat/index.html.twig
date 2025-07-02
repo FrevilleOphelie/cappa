@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Nos petits protégés
+{% endblock %}
+
+{% block body %}
+
+	<h1>
+		Nos pensionnaires
+	</h1>
+
+	<p>
+		Voici les portraits de tous nos petits protégés, avec une indication si le chat est à l'adoption ou en attente d'une marraine (ou d'un parrain), ou leur nom si ils sont déjà parrainés.
+	</p>
+
+	<section class="catConteneur">
+
+		{% for chat in chats %}
+
+			<div class="catFiche">
+
+				<h3 class"nomchat">
+					{{ chats.nom }}
+				</h3>
+
+				<div class="description">
+					{{ chats.description }}
+				</div>
+
+				<div class="renseignements">
+
+					<span class="aLAdoption">
+
+						<p>
+							À l'adoption :
+						</p>
+
+						{% if chat.adopte = true %}
+							<p>
+								Oui
+							</p>
+						{% else %}
+							<p>Non</p>
+						{% endif %}
+
+                    </span>
+
+                    <span class="parraine">
+                    
+                    {% if chat.parainne = true %}
+                    
+                    <p><strong>Nom de la marraine (ou du parrain) :</strong>{{chat.marraine}}</p>
+
+                    {% else %}
+                        
+                        Je ne suis pas encore parrainé... <a href="{{path('app_contact')}}">Contacte le Cappa</a> si tu veux ma marraine ou mon parrain ! 
+                    
+                    {% endif %}                    
+
+                    </span>
+
+				</div>
+
+			</div>
+
+		{% endfor %}
+
+        <p>Vous voulez nous aider à prendre soin de tout ce petit monde ? N'hésiter pas à <a href="{{path('app_dons')}}">faire un don au Cappa</a> !</p>
+
+	</section>
+
+{% endblock %}
