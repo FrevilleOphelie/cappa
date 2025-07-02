@@ -1,6 +1,6 @@
 <?php
 
-namespace ChatCrudController;
+namespace App\Controller\Admin;
 
 use App\Entity\Chat;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
