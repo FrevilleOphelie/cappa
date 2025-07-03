@@ -1,7 +1,39 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Gestion{% endblock %}
+{% block title %}
+	Gestion des contenus
+{% endblock %}
 
 {% block body %}
+
+	<h1>
+		Gestion des contenus
+	</h1>
+
+	<div id="dashboard">
+
+		<ul>
+			{% if is_granted('ROLE_ADMIN') %}
+
+				<a href="{{ path('user_index') }}">Gestion des utilisateurs</a>
+
+			{% endif %}
+
+			{% if is_granted('ROLE_USER') %}
+				<li>
+
+					<a href="{{ path('chat_index') }}">Gestion des informations sur les Chats</a>
+				</li>
+
+				<li>
+					<a href="{{ path('news_index') }}">Gestion des Actualités</a>
+
+				</li>
+                
+			{% endif %}
+
+		</ul>
+
+	</div>
 
 {% endblock %}
