@@ -39,10 +39,7 @@ security:
     access_control:
         - { path: ^/superadmin, roles: ROLE_SUPERADMIN }
         - { path: ^/admin, roles: ROLE_ADMIN }
-        - { path: ^/profile, roles: ROLE_USER }
         - { path: ^/dashboard, roles: ROLE_USER}
-        - { path: ^/chat, roles: ROLE_USER}
-        - { path: ^/news, roles: ROLE_USER}
         - { path: ^/user, roles: ROLE_ADMIN}
 
 
