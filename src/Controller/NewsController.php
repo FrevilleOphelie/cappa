@@ -25,6 +25,9 @@ final class NewsController extends AbstractController
     #[Route('/new', name: 'app_news_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
+        //Interdire l'accès aux non-connectés
+        $this->denyAccessUnlessGranted('ROLE_USER');
+
         $news = new News();
         $form = $this->createForm(NewsForm::class, $news);
         $form->handleRequest($request);
@@ -38,7 +41,7 @@ final class NewsController extends AbstractController
 
         return $this->render('news/new.html.twig', [
             'news' => $news,
-            'form' => $form,
+            'form' => $form->createView(),
         ]);
     }
 
@@ -53,6 +56,9 @@ final class NewsController extends AbstractController
     #[Route('/{id}/edit', name: 'app_news_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, News $news, EntityManagerInterface $entityManager): Response
     {
+        //Interdire l'accès aux non-connectés
+        $this->denyAccessUnlessGranted('ROLE_USER');
+
         $form = $this->createForm(NewsForm::class, $news);
         $form->handleRequest($request);
 
@@ -64,13 +70,16 @@ final class NewsController extends AbstractController
 
         return $this->render('news/edit.html.twig', [
             'news' => $news,
-            'form' => $form,
+            'form' => $form->createView(),
         ]);
     }
 
     #[Route('/{id}', name: 'app_news_delete', methods: ['POST'])]
     public function delete(Request $request, News $news, EntityManagerInterface $entityManager): Response
     {
+        //Interdire l'accès aux non-connectés
+        $this->denyAccessUnlessGranted('ROLE_USER');
+        
         if ($this->isCsrfTokenValid('delete'.$news->getId(), $request->getPayload()->getString('_token'))) {
             $entityManager->remove($news);
             $entityManager->flush();

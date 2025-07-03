@@ -28,7 +28,6 @@ final class ChatController extends AbstractController
         //Interdire l'accès aux non-connectés
         $this->denyAccessUnlessGranted('ROLE_USER');
 
-
         $chat = new Chat();
         $form = $this->createForm(ChatForm::class, $chat);
         $form->handleRequest($request);
