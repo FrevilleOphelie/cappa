@@ -1,20 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello NewsController!{% endblock %}
+{% block title %}News index{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <h1>News index</h1>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Type</th>
+                <th>Date_heure</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Lieu</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for news in news %}
+            <tr>
+                <td>{{ news.id }}</td>
+                <td>{{ news.type }}</td>
+                <td>{{ news.dateHeure }}</td>
+                <td>{{ news.description }}</td>
+                <td>{{ news.image }}</td>
+                <td>{{ news.lieu }}</td>
+                <td>
+                    <a href="{{ path('app_news_show', {'id': news.id}) }}">show</a>
+                    <a href="{{ path('app_news_edit', {'id': news.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/xampp/htdocs/cappa/src/Controller/NewsController.php</code></li>
-        <li>Your template at <code>C:/xampp/htdocs/cappa/templates/news/index.html.twig</code></li>
-    </ul>
-</div>
+    <a href="{{ path('app_news_new') }}">Create new</a>
 {% endblock %}

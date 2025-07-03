@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chat{% endblock %}
+
+{% block body %}
+    <h1>Chat</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ chat.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ chat.nom }}</td>
+            </tr>
+            <tr>
+                <th>DateNaissance</th>
+                <td>{{ chat.dateNaissance }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ chat.description }}</td>
+            </tr>
+            <tr>
+                <th>Adopte</th>
+                <td>{{ chat.adopte ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Parrainne</th>
+                <td>{{ chat.parrainne ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Marraine</th>
+                <td>{{ chat.marraine }}</td>
+            </tr>
+            <tr>
+                <th>ChatFilename</th>
+                <td>{{ chat.chatFilename }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_chat_index') }}">back to list</a>
+
+    <a href="{{ path('app_chat_edit', {'id': chat.id}) }}">edit</a>
+
+    {{ include('chat/_delete_form.html.twig') }}
+{% endblock %}
