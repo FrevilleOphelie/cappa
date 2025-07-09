@@ -33,7 +33,7 @@ class Chat
     private ?string $marraine = null;
 
     #[ORM\Column(type: 'string')]
-    private ?string $chatFilename;
+    private ?string $photoFilename;
 
     public function getId(): ?int
     {
@@ -112,14 +112,14 @@ class Chat
         return $this;
     }
 
-    public function getChatFilename(): string
+    public function getPhotoFilename(): string
     {
-        return $this->chatFilename;
+        return $this->photoFilename;
     }
 
-    public function setChatFilename(string $chatFilename): self
+    public function setPhotoFilename(string $photoFilename): self
     {
-        $this->chatFilename = $chatFilename;
+        $this->photoFilename = $photoFilename;
 
         return $this;
     }

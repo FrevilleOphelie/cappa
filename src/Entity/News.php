@@ -24,7 +24,7 @@ class News
     private ?string $description = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $image = null;
+    private ?string $imageFilename = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $lieu = null;
@@ -70,14 +70,14 @@ class News
         return $this;
     }
 
-    public function getImage(): ?string
+    public function getImageFilename(): ?string
     {
-        return $this->image;
+        return $this->imageFilename;
     }
 
-    public function setImage(?string $image): static
+    public function setImageFilename(?string $imageFilename): static
     {
-        $this->image = $image;
+        $this->imageFilename = $imageFilename;
 
         return $this;
     }

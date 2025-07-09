@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\News;
 use App\Form\NewsForm;
 use App\Repository\NewsRepository;
+use App\Service\ImageUploader;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -23,7 +24,7 @@ final class NewsController extends AbstractController
     }
 
     #[Route('/new', name: 'app_news_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, EntityManagerInterface $entityManager): Response
+    public function new(Request $request, ImageUploader $imageUploader, EntityManagerInterface $entityManager): Response
     {
         //Interdire l'accès aux non-connectés
         $this->denyAccessUnlessGranted('ROLE_USER');
@@ -33,6 +34,13 @@ final class NewsController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $imageFile = $form->get('image')->getData();
+            if ($imageFile) {
+                $imageFileName = $imageUploader->upload($imageFile);
+                $news->setImageFilename($imageFileName);
+            }
+
             $entityManager->persist($news);
             $entityManager->flush();
 

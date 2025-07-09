@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Chat;
 use App\Form\ChatForm;
 use App\Repository\ChatRepository;
+use App\Service\ImageUploader;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -23,7 +24,7 @@ final class ChatController extends AbstractController
     }
 
     #[Route('/new', name: 'app_chat_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, EntityManagerInterface $entityManager): Response
+    public function new(Request $request, ImageUploader $imageUploader, EntityManagerInterface $entityManager): Response
     {
         //Interdire l'accès aux non-connectés
         $this->denyAccessUnlessGranted('ROLE_USER');
@@ -33,6 +34,13 @@ final class ChatController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $photoFile = $form->get('photo')->getData();
+            if ($photoFile) {
+                $photoFileName = $imageUploader->upload($photoFile);
+                $chat->setPhotoFilename($photoFileName);
+            }
+
             $entityManager->persist($chat);
             $entityManager->flush();
 
