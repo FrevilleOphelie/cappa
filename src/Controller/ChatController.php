@@ -45,14 +45,6 @@ final class ChatController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_chat_show', methods: ['GET'])]
-    public function show(Chat $chat): Response
-    {
-        return $this->render('chat/show.html.twig', [
-            'chat' => $chat,
-        ]);
-    }
-
     #[Route('/{id}/edit', name: 'app_chat_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Chat $chat, EntityManagerInterface $entityManager): Response
     {
