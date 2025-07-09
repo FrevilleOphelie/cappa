@@ -6,6 +6,7 @@ use App\Entity\Chat;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\File;
 
 class ChatForm extends AbstractType
 {
@@ -18,7 +19,7 @@ class ChatForm extends AbstractType
             ->add('adopte')
             ->add('parrainne')
             ->add('marraine')
-            ->add('chatFilename')
+            ->add('image')
         ;
     }
 
